@@ -5,7 +5,7 @@ const Home = () => {
     <div>
       <div className="relative flex flex-col gap-y-4 lg:flex-row  items-center justify-center w-full min-h-screen ">
         <div className="flex flex-col ">
-          <h1 className="text-[150px] md:text-[200px] md:tracking-normal lg:text-[250px] text-slate-300 font-bold lg:tracking-wide lg:leading-4 lg:shadow-md hover:text-slate-400">
+          <h1 className="text-[150px] md:text-[200px] md:tracking-normal lg:text-[250px] text-slate-300 font-bold lg:tracking-wide lg:leading-4 lg:shadow-md md:hover:text-slate-400">
             AIR MAX
           </h1>
           <img

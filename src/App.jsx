@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Cart, Explore, Home } from "./pages/index";
+import { Cart, Explore, Home, Preview } from "./pages/index";
 
 const App = () => {
   return (
@@ -12,6 +12,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/preview/:id" element={<Preview />} />
       </Routes>
     </div>
   );
