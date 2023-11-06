@@ -32,8 +32,8 @@ const PreviewCard = ({ shoe }) => {
 
   return (
     <div>
-      <main className="grid place-items-center h-screen bg-gray-50">
-        <section className="flex flex-col md:flex-row gap-11 py-10 px-5 bg-white rounded-xl shadow-xl hover:shadow-2xl w-3/4 md:max-w-2xl">
+      <main className="grid place-items-center min-h-[1300px] md:min-h-screen bg-gray-50">
+        <section className="flex flex-col md:flex-row gap-11 py-10 px-5 bg-white rounded-xl shadow-xl hover:shadow-2xl  w-3/4 md:max-w-2xl">
           <div className="text-gray-500 flex flex-col justify-between">
             <img
               src={img}
