@@ -32,9 +32,9 @@ const PreviewCard = ({ shoe }) => {
 
   return (
     <div>
-      <main className="grid place-items-center min-h-[1300px] md:min-h-screen bg-gray-50">
-        <section className="flex flex-col md:flex-row gap-11 py-10 px-5 bg-white rounded-xl shadow-xl hover:shadow-2xl  w-3/4 md:max-w-2xl">
-          <div className="text-gray-500 flex flex-col justify-between">
+      <main className="grid place-items-center min-h-[1300px] md:min-h-screen bg-gray-50 dark:bg-[#121212]">
+        <section className="flex flex-col md:flex-row gap-11 py-10 px-5 bg-white dark:bg-[#1f1b24] dark:hover:bg-[#121015]  rounded-xl shadow-xl hover:shadow-2xl  w-3/4 md:max-w-2xl">
+          <div className="text-gray-500 dark:text-white flex flex-col justify-between">
             <img
               src={img}
               alt="shoe"
@@ -42,67 +42,71 @@ const PreviewCard = ({ shoe }) => {
             />
             <div className="">
               <small className="uppercase">choose size</small>
-              <div class="flex flex-wrap md:flex-nowrap gap-1">
+              <div className="flex flex-wrap md:flex-nowrap gap-1">
                 <a
-                  href="javascript:void(0);"
-                  class="grid place-items-center border px-3 py-2 hover:bg-gray-500 hover:text-white transition"
+                  href="#"
+                  className="grid place-items-center border px-3 py-2 hover:bg-gray-500 hover:text-white transition"
                 >
                   <small>5</small>
                 </a>
                 <a
-                  href="javascript:void(0);"
-                  class="grid place-items-center border px-3 py-2 cursor-not-allowed text-gray-300 transition"
+                  href="#"
+                  className="grid place-items-center border px-3 py-2 cursor-not-allowed text-gray-300 transition"
                 >
                   <small>6</small>
                 </a>
                 <a
-                  href="javascript:void(0);"
-                  class="grid place-items-center border px-3 py-2 hover:bg-gray-500 hover:text-white transition"
+                  href="#"
+                  className="grid place-items-center border px-3 py-2 hover:bg-gray-500 hover:text-white transition"
                 >
                   <small>7</small>
                 </a>
                 <a
-                  href="javascript:void(0);"
-                  class="grid place-items-center border px-3 py-2 cursor-not-allowed text-gray-300 transition"
+                  href="#"
+                  className="grid place-items-center border px-3 py-2 cursor-not-allowed text-gray-300 transition"
                 >
                   <small>8</small>
                 </a>
                 <a
-                  href="javascript:void(0);"
-                  class="grid place-items-center border px-3 py-2 cursor-not-allowed text-gray-300 transition"
+                  href="#"
+                  className="grid place-items-center border px-3 py-2 cursor-not-allowed text-gray-300 transition"
                 >
                   <small>9</small>
                 </a>
                 <a
-                  href="javascript:void(0);"
-                  class="grid place-items-center border px-3 py-2 hover:bg-gray-500 hover:text-white transition"
+                  href="#"
+                  className="grid place-items-center border px-3 py-2 hover:bg-gray-500 hover:text-white transition"
                 >
                   <small>10</small>
                 </a>
                 <a
-                  href="javascript:void(0);"
-                  class="grid place-items-center border px-3 py-2 hover:bg-gray-500 hover:text-white transition"
+                  href="#"
+                  className="grid place-items-center border px-3 py-2 hover:bg-gray-500 hover:text-white transition"
                 >
                   <small>11</small>
                 </a>
                 <a
-                  href="javascript:void(0);"
-                  class="grid place-items-center border px-3 py-2 hover:bg-gray-500 hover:text-white transition"
+                  href="#"
+                  className="grid place-items-center border px-3 py-2 hover:bg-gray-500 hover:text-white transition"
                 >
                   <small>12</small>
                 </a>
               </div>
             </div>
           </div>
-          <main className="text-gray-500">
+          <main className="text-gray-500 dark:text-white">
             <small className="uppercase">
               {gender}'s {brand}
             </small>
-            <h3 className="uppercase text-black text-2xl font-semibold">
+            <h3 className="uppercase text-black dark:text-white text-2xl font-semibold">
               {name}
             </h3>
-            <h3 className="text-2xl font-semibold mb-7">₹ {price}</h3>
-            <small className="text-black text-sm">{desc}</small>
+            <h3 className="text-2xl font-semibold mb-7 dark:text-white">
+              ₹ {price}
+            </h3>
+            <small className="text-black  dark:text-white text-sm">
+              {desc}
+            </small>
             <div className="flex gap-0.5 mt-4">
               <button
                 id="addToCartButton"

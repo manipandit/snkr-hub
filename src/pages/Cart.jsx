@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cart } = useSelector((state) => state);
+  const cart = useSelector((state) => state.cart);
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Cart = () => {
               <div className="min-w-[320px] md:min-w-[1280px] md:max-h-[100px] flex justify-center">
                 <div className="flex flex-col justify-around gap-y-4 md:gap-y-10">
                   <div className="">
-                    <h1 className="text-4xl md:text-6xl font-semibold">
+                    <h1 className="text-4xl dark:text-white md:text-6xl font-semibold">
                       Cart is Empty !!
                     </h1>
                   </div>
@@ -45,7 +45,7 @@ const Cart = () => {
                   <h1 className="text-xl md:text-4xl font-bold text-slate-300 hover:text-slate-500">
                     TOTAL ITEMS : {cart.length}
                   </h1>
-                  <h1 className="text-xl md:text-5xl font-bold text-slate-500">
+                  <h1 className="text-xl dark:text-white md:text-5xl font-bold text-slate-500">
                     TOTAL PRICE : ₹ {total}
                   </h1>
                 </div>

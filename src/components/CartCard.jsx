@@ -28,7 +28,7 @@ const CartCard = ({ item }) => {
 
   return (
     <div>
-      <div className="h-72 w-[310px] md:h-72 md:w-[600px] bg-slate-100  rounded-2xl hover:shadow-lg mt-[40px] md:mt-[20px]">
+      <div className="h-80 w-[310px] md:h-72 md:w-[600px] bg-slate-100 dark:bg-[#1f1b24] dark:hover:bg-[#121015] rounded-2xl hover:shadow-lg mt-[40px] md:mt-[20px]">
         <div className="">
           <div>
             <img
@@ -38,7 +38,7 @@ const CartCard = ({ item }) => {
               height={150}
             />
           </div>
-          <div className="flex  justify-between">
+          <div className="flex  justify-between dark:text-white">
             <div className="flex flex-col ml-[20px] gap-y-2 overflow-y-hidden">
               <div className="text-xs font-bold tracking-normal mr-1 md:text-sm sm:block">
                 {item.story_html.split(" ").slice(0, 28).join(" ") + "..."}
@@ -52,14 +52,14 @@ const CartCard = ({ item }) => {
                   <div className="flex gap-x-6">
                     <p className="flex ">
                       <button
-                        className="p-1 mr-2 bg-[#dadada] border rounded-lg font-bold w-[30px]"
+                        className="p-1 mr-2 bg-[#dadada] dark:bg-[#2a2a2a] dark:hover:bg-black dark:border-none border rounded-lg font-bold w-[30px]"
                         onClick={() => decrease(item.id)}
                       >
                         -
                       </button>
                       <span className="text-lg font-bold">{item.qty}</span>
                       <button
-                        className="p-1 ml-2 bg-[#dadada]  border rounded-lg font-bold w-[30px]"
+                        className="p-1 ml-2 bg-[#dadada] dark:bg-[#2a2a2a] dark:hover:bg-black dark:border-none border rounded-lg font-bold w-[30px]"
                         onClick={() => increase(item.id)}
                       >
                         +

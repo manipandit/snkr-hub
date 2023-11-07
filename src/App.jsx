@@ -5,7 +5,7 @@ import { Cart, Explore, Home, Preview } from "./pages/index";
 
 const App = () => {
   return (
-    <div className="bg-gray-50 h-full overflow-y-hidden">
+    <div className="bg-gray-50 dark:bg-[#121212] h-full overflow-y-hidden">
       <Navbar />
 
       <Routes>

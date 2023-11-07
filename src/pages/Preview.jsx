@@ -21,7 +21,7 @@ const Preview = (props) => {
   const shoe = items[0];
 
   return (
-    <div>
+    <div className="">
       <PreviewCard shoe={shoe} />
     </div>
   );
