@@ -1,18 +1,29 @@
 import React, { useState, useEffect } from "react";
 import CartCard from "../components/CartCard";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { checkoutCart } from "../redux/slices/CartSlice";
+
+import toast from "react-hot-toast";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
-  const [total, setTotal] = useState(0);
+  const dispatch = useDispatch();
 
+  const [total, setTotal] = useState(0);
+  const navigate = useNavigate();
   useEffect(() => {
     setTotal(
       cart.reduce((acc, curr) => acc + curr.retail_price_cents * curr.qty, 0)
     );
   }, [cart]);
 
+  const checkout = () => {
+    toast.success("Order Placed Successfully");
+    localStorage.removeItem("localCart");
+    dispatch(checkoutCart());
+    navigate("/");
+  };
   return (
     <div>
       <div>
@@ -50,7 +61,10 @@ const Cart = () => {
                   </h1>
                 </div>
                 <div>
-                  <button className="bg-[#2a2a2a] w-full text-white p-2 rounded-md cursor-pointer hover:bg-black">
+                  <button
+                    className="bg-[#2a2a2a] w-full text-white p-2 rounded-md cursor-pointer hover:bg-black"
+                    onClick={checkout}
+                  >
                     Checkout
                   </button>
                 </div>
